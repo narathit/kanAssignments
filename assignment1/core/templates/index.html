@@ -1,0 +1,44 @@
+<html>
+    <head>
+    <style>
+    .myDiv {
+      border: 5px outset red;
+      background-color: lightblue;
+      text-align: left;
+    }
+    .fDiv {
+      border: 5px outset;
+      text-align: left;
+      padding: 35px;
+    }
+    </style>
+    </head>
+    <body>
+    <div class="myDiv">
+        <p>Name: {{ name }} </p>
+        <p>Email: {{ email }} </p>
+        <p>Work: {{ work }} </p>
+        <p>GitHub: {{ github }} </p>
+    </div>
+    <div class="fDiv">
+        <form action="." method="POST">
+            {% csrf_token %}
+            <div>
+            Name: <input name="name" type="text"/>
+            </div>
+            <div>
+            Email: <input name="email" type="text"/>
+            </div>
+            <div>
+            Work: <input name="work" type="text"/>
+            </div>
+            <div>
+            GitHub: <input name="github" type="text"/>
+            </div>
+            <div>
+            <button type="submit">Subscribe</button>
+            </div>
+        </form>
+    </div>
+    </body>
+</html>
