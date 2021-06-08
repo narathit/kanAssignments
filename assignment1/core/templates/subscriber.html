@@ -1,0 +1,32 @@
+<html>
+    <head>
+    <style>
+    .myDiv {
+      border: 5px outset red;
+      background-color: lightblue;
+      text-align: left;
+    }
+    .fDiv {
+      border: 5px outset;
+      text-align: left;
+      padding: 35px;
+    }
+    </style>
+    </head>
+    <body>
+    <div class="myDiv">
+        <p>{{ message }} </p>
+    </div>
+    <div class="fDiv">
+        <form action="." method="POST">
+            {% csrf_token %}
+            <div>
+            Email: <input name="email" type="text"/>
+            </div>
+            <div>
+            <button type="submit">Subscribe</button>
+            </div>
+        </form>
+    </div>
+    </body>
+</html>

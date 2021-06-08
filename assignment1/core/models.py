@@ -5,3 +5,6 @@ class Profile(models.Model):
     email = models.CharField(max_length=300, default="")
     work = models.CharField(max_length=300, default="")
     github = models.CharField(max_length=300, default="")
+
+class Subscriber(models.Model):
+    email = models.CharField(max_length=300)
